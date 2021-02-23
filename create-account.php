@@ -14,13 +14,15 @@
 
         if ($conn->connect_error) {
           die("Connection failed: " . $conn->connect_error);
+        } else {
+            echo "connected";
         }
 
         $sql = "INSERT INTO user_data('username', 'password') VALUES ($username, $password)";
 
-        $conn->query($sql);
+        $conn->query($sql); echo "recorded";
 
-        $conn->close();
+        $conn->close(); echo "closed";
 
         /*
 
