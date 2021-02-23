@@ -17,8 +17,7 @@
           die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "INSERT INTO user_data (username, password)
-        VALUES ($username, $password)";
+        $sql = "INSERT INTO `user_data`(`username`, `password`) VALUES ($username, $password)";
 
         if ($conn->query($sql) === TRUE) {
           echo "New record created successfully";
