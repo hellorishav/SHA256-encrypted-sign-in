@@ -1,43 +1,20 @@
 <?php
 
-    if (isset($_POST["password"])) {
+if (isset($_POST["username"])) { // Check if Username entered
+
+    if (isset($_POST["password"])) { // Check if Password entered
 
         $username = hash('sha256', $_POST["username"]); // Hashing username with SHA 256 algorithm
         $password = hash('sha256', $_POST["password"]); // Hashing password with SHA 256 algorithm
+
+        // Entering Database Credentials
 
         $servername = "127.0.0.1:3306";
         $db_username = "u947421468_sha256example";
         $db_password = "sha256@Example";
         $dbname = "u947421468_sha256example";
 
-        $conn = mysqli_connect($servername, $db_username, $db_password, $dbname);
-
-        if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
-        } else {
-            echo "connected";
-        }
-
-        $sql = "INSERT INTO user_data('username', 'password') VALUES ($username, $password)";
-
-        $result = mysqli_query($conn, $result);
-
-        if ($result) {
-            echo "recorded";
-        }
-
-        $conn->close(); echo "closed";
-
-        /*
-
-        // Entering Database Credentials
-
-        $localname = "localhost";
-        $database_username = "u947421468_SHA256_SignIn";
-        $database_password = "SHA256@encrypt";
-        $db_name = "u947421468_SHA256_SignIn";
-
-        $connection_to_database = new mysqli($localname, $database_username, $database_password, $db_name); // Connect to Database
+        $connection_to_database = new mysqli($servername, $db_username, $db_password, $dbname); // Connect to Database
 
         if ($connection_to_database->connect_error) {
 
@@ -57,8 +34,18 @@
         }
 
         $connection_to_database->close();
-        */
-    } 
+
+        } else {
+
+            echo "Please enter password."; // If password not entered, return error message
+
+        }
+
+        } else {
+
+            echo "Please enter username."; // If username not entered, return error message
+
+        }
 
 ?>
 
