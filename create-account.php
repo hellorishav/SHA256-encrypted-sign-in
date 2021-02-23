@@ -2,8 +2,8 @@
 
 if (isset($_POST["submit"])) {
 
-      $user_username = $_POST["username"]; // Hashing username with SHA 256 algorithm
-      $user_password = $_POST["password"]; // Hashing password with SHA 256 algorithm
+      $user_username = $_POST["user_username"]; // Hashing username with SHA 256 algorithm
+      $user_password = $_POST["user_password"]; // Hashing password with SHA 256 algorithm
 
       // Entering Database Credentials
 
@@ -35,8 +35,8 @@ if (isset($_POST["submit"])) {
 
 <form method="post">
 
-<input type="text" name="username">Username</input><br>
-<input type="password" name="password">Password</input><br>
+<input type="text" name="user_username">Username</input><br>
+<input type="password" name="user_password">Password</input><br>
 <button type="submit" name="submit" value="submit">Create Account</button><br>
 
 </form>
