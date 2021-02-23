@@ -10,7 +10,7 @@
         $db_password = "sha256@Example";
         $dbname = "u947421468_sha256example";
 
-        $conn = new mysqli($servername, $db_username, $db_password, $dbname);
+        $conn = mysqli_connect($servername, $db_username, $db_password, $dbname);
 
         if ($conn->connect_error) {
           die("Connection failed: " . $conn->connect_error);
@@ -20,7 +20,11 @@
 
         $sql = "INSERT INTO user_data('username', 'password') VALUES ($username, $password)";
 
-        $conn->query($sql); echo "recorded";
+        $result = mysqli_query($conn, $result);
+
+        if ($result) {
+            echo "recorded";
+        }
 
         $conn->close(); echo "closed";
 
