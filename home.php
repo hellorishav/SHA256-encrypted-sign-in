@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://rishavkumar.io/styles.css">
+<title>Home - SHA-256 Encrypted Sign In System</title>
 
 <section align="center">
 
