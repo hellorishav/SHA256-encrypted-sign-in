@@ -1,10 +1,12 @@
-<button onclick="document.location.href='home.php'">Back to Home</button><br>
+<link rel="stylesheet" href="https://rishavkumar.io/styles.css">
+
+<button class="button" onclick="document.location.href='home.php'">Back to Home</button><br>
 
 <form method="post">
 
-<input type="text" name="user_username" placeholder="Username"></input><br>
-<input type="password" name="user_password" placeholder="Password"></input><br>
-<button type="submit" name="submit" value="submit">Sign In</button><br>
+<input class="input" type="text" name="user_username" placeholder="Username"></input><br>
+<input class="input" type="password" name="user_password" placeholder="Password"></input><br>
+<button class="button" type="submit" name="submit" value="submit">Sign In</button><br>
 
 </form>
 
