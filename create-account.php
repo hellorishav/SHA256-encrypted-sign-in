@@ -1,5 +1,7 @@
 <?php
 
+    if (isset($_POST["password"])) {
+
         $username = hash('sha256', $_POST["username"]); // Hashing username with SHA 256 algorithm
         $password = hash('sha256', $_POST["password"]); // Hashing password with SHA 256 algorithm
 
@@ -30,6 +32,8 @@
         }
 
         $connection_to_database->close();
+
+    }
 
 ?>
 
