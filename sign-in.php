@@ -1,14 +1,14 @@
 <link rel="stylesheet" href="https://rishavkumar.io/styles.css">
 
-<section align="center" style="max-width: 300px">
+<section align="center">
 
-<button class="button" onclick="document.location.href='home.php'">Back to Home</button><br>
+<button class="button" onclick="document.location.href='home.php'">Back to Home</button><br><br>
 
 <form method="post">
 
-<input class="input" type="text" name="user_username" placeholder="Username"></input><br>
-<input class="input" type="password" name="user_password" placeholder="Password"></input><br>
-<button class="button" type="submit" name="submit" value="submit">Sign In</button><br>
+<input style="max-width: 300px" class="input" type="text" name="user_username" placeholder="Username"></input><br>
+<input style="max-width: 300px" class="input" type="password" name="user_password" placeholder="Password"></input><br><br>
+<button style="max-width: 300px" class="button is-link" type="submit" name="submit" value="submit">Sign In</button><br>
 
 </form>
 
