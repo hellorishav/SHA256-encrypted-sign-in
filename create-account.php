@@ -22,9 +22,8 @@ if (isset($_POST["submit"])) {
       $password = "sha256@Example";
       $dbname = "u947421468_sha256example";
 
-      // Create connection
       $conn = new mysqli($servername, $username, $password, $dbname);
-      // Check connection
+
       if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }

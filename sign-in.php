@@ -22,9 +22,8 @@ if (isset($_POST["submit"])) {
       $password = "sha256@Example";
       $dbname = "u947421468_sha256example";
 
-      // Create connection
       $conn = new mysqli($servername, $username, $password, $dbname);
-      // Check connection
+
       if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }
@@ -35,10 +34,10 @@ if (isset($_POST["submit"])) {
       $count = mysqli_num_rows($result);  
         
       if($count == 1){  
-          echo "<h1><center> Login successful </center></h1>";  
+          echo "<h1>Login successful.</h1>";  
       }  
       else{  
-          echo "<h1> Login failed. Invalid username or password.</h1>";  
+          echo "<h1>Login failed.</h1>";  
       }     
 
       $conn->close();
