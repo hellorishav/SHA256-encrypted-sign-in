@@ -2,8 +2,8 @@
 
 if (isset($_POST["submit"])) {
 
-      $user_username = $_POST["user_username"]; // Hashing username with SHA 256 algorithm
-      $user_password = $_POST["user_password"]; // Hashing password with SHA 256 algorithm
+      $user_username = hash('sha256', $_POST["user_username"]); // Hashing username with SHA 256 algorithm
+      $user_password = hash('sha256', $_POST["user_password"]); // Hashing password with SHA 256 algorithm
 
       // Entering Database Credentials
 
