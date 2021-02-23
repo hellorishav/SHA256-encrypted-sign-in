@@ -16,7 +16,7 @@
           die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "INSERT INTO `user_data`(`username`, `password`) VALUES ($username, $password)";
+        $sql = "INSERT INTO user_data('username', 'password') VALUES ($username, $password)";
 
         $conn->query($sql);
 
