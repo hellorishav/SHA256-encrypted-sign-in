@@ -17,4 +17,4 @@ There's clearly outlined variables in each of the account creation and sign in p
 
 ## Running the Application
 
-If you're not able to run it on your own server, I have it hosted on mine! [Check it out](https://rishavkumar.io/SHA-256-SignIn/)
+If you're not able to run it on your own server, I have it hosted on mine! [Check it out](https://rishavkumar.io/SHA-256-SignIn/){:target="_blank" rel="noopener"}
