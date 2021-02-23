@@ -51,8 +51,8 @@ if (isset($_POST["username"])) { // Check if Username entered
 
 <form method="post">
 
-<input type="text" id="username">Username</input>
-<input type="password" id="password">Password</input>
-<button type="submit" value="submit">Create Account</button>
+<input type="text" id="username">Username</input><br>
+<input type="password" id="password">Password</input><br>
+<button type="submit" value="submit">Create Account</button><br>
 
 </form>
