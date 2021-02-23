@@ -1,2 +1,2 @@
-<button onclick="document.location.href='/create-account'">Create Account</button>
-<button onclick="document.location.href='/sign-in'">Sign In</button>
+<button onclick="document.location.href='https://rishavkumar.io/SHA-256-SignIn/create-account'">Create Account</button>
+<button onclick="document.location.href='https://rishavkumar.io/SHA-256-SignIn/sign-in'">Sign In</button>
