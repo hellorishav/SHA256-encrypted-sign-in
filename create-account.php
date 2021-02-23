@@ -19,7 +19,7 @@ if (isset($_POST["submit"])) {
         die("Connection failed: " . $conn->connect_error);
       }
 
-      $sql = "INSERT INTO user_data (username, password) VALUES (" . $user_username . ", " . $user_password . ")";
+      $sql = "INSERT INTO user_data (username, password) VALUES ('" . $user_username . "', '" . $user_password . "')";
 
       if ($conn->query($sql) === TRUE) {
         echo "Account created successfully.";
