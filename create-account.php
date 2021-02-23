@@ -8,8 +8,9 @@
         $localname = "localhost";
         $database_username = "u947421468_SHA256_SignIn";
         $database_password = "SHA256_SignIn";
+        $db_name = "u947421468_SHA256_SignIn";
 
-        $connection_to_database = new mysqli($localname, $database_username, $database_password); // Connect to Database
+        $connection_to_database = new mysqli($localname, $database_username, $database_password, $db_name); // Connect to Database
 
         if ($connection_to_database->connect_error) {
 
