@@ -41,10 +41,10 @@ if (isset($_POST["submit"])) {
       $count = mysqli_num_rows($result);  
         
       if($count == 1){  
-          echo "<h1>Login successful.</h1>";  
+          echo "<center>Login successful.</center>";  
       }  
       else{  
-          echo "<h1>Login failed.</h1>";  
+          echo "<center>Login failed.</center>";  
       }     
 
       $conn->close();
