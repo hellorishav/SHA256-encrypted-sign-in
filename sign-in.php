@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="https://rishavkumar.io/styles.css">
 
+<section align="center" style="max-width: 300px">
+
 <button class="button" onclick="document.location.href='home.php'">Back to Home</button><br>
 
 <form method="post">
@@ -9,6 +11,8 @@
 <button class="button" type="submit" name="submit" value="submit">Sign In</button><br>
 
 </form>
+
+</section>
 
 <?php
 
