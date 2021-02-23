@@ -5,7 +5,7 @@
         $username = hash('sha256', $_POST["username"]); // Hashing username with SHA 256 algorithm
         $password = hash('sha256', $_POST["password"]); // Hashing password with SHA 256 algorithm
 
-        $servername = "localhost";
+        $servername = "127.0.0.1:3306";
         $username = "u947421468_SHA256_SignIn";
         $password = "SHA256@encrypt";
         $dbname = "u947421468_SHA256_SignIn";
