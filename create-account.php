@@ -35,15 +35,7 @@ if (isset($_POST["username"])) { // Check if Username entered
 
         $connection_to_database->close();
 
-        } else {
-
-            echo "Please enter password."; // If password not entered, return error message
-
         }
-
-        } else {
-
-            echo "Please enter username."; // If username not entered, return error message
 
         }
 
