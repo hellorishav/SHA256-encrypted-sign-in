@@ -5,12 +5,12 @@
         $username = hash('sha256', $_POST["username"]); // Hashing username with SHA 256 algorithm
         $password = hash('sha256', $_POST["password"]); // Hashing password with SHA 256 algorithm
 
-        $servername = "localhost";
-        $username = "u947421468_sha256example";
-        $password = "sha256@Example";
+        $servername = "127.0.0.1:3306";
+        $db_username = "u947421468_sha256example";
+        $db_password = "sha256@Example";
         $dbname = "u947421468_sha256example";
 
-        $conn = new mysqli($servername, $username, $password, $dbname);
+        $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
         if ($conn->connect_error) {
           die("Connection failed: " . $conn->connect_error);
