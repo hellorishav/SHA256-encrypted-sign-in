@@ -5,11 +5,36 @@
         $username = hash('sha256', $_POST["username"]); // Hashing username with SHA 256 algorithm
         $password = hash('sha256', $_POST["password"]); // Hashing password with SHA 256 algorithm
 
+        $servername = "localhost";
+        $username = "u947421468_SHA256_SignIn";
+        $password = "SHA256@encrypt";
+        $dbname = "u947421468_SHA256_SignIn";
+
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // Check connection
+        if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "INSERT INTO user_data (username, password)
+        VALUES ($username, $password)";
+
+        if ($conn->query($sql) === TRUE) {
+          echo "New record created successfully";
+        } else {
+          echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+
+        $conn->close();
+
+        /*
+
         // Entering Database Credentials
 
         $localname = "localhost";
         $database_username = "u947421468_SHA256_SignIn";
-        $database_password = "SHA256_SignIn";
+        $database_password = "SHA256@encrypt";
         $db_name = "u947421468_SHA256_SignIn";
 
         $connection_to_database = new mysqli($localname, $database_username, $database_password, $db_name); // Connect to Database
@@ -32,8 +57,8 @@
         }
 
         $connection_to_database->close();
-
-    }
+        */
+    } 
 
 ?>
 
