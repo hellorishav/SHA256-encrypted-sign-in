@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="https://rishavkumar.io/styles.css">
-<title>Create Account - SHA-256 Encrypted Sign In System</title>
+<head><title>Create Account - SHA-256 Encrypted Sign In System</title></head>
 
 <section align="center">
 
