@@ -4,7 +4,7 @@
 
 <input type="text" name="user_username" placeholder="Username"></input><br>
 <input type="password" name="user_password" placeholder="Password"></input><br>
-<button type="submit" name="submit" value="submit">Create Account</button><br>
+<button type="submit" name="submit" value="submit">Sign In</button><br>
 
 </form>
 
@@ -29,12 +29,16 @@ if (isset($_POST["submit"])) {
         die("Connection failed: " . $conn->connect_error);
       }
 
-      $sql = "INSERT INTO user_data (username, password) VALUES ('" . $user_username . "', '" . $user_password . "')";
-
-      if ($conn->query($sql) === TRUE) {
-        echo "Account created successfully.";
-      } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+      $sql = "SELECT from user_data where username like '".$user_username."' and password like '".$user_password."'";
+      $result = mysqli_query($conn, $sql);  
+      $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
+      $count = mysqli_num_rows($result);  
+          
+      if($count == 1){  
+        echo "<h1><center> Login successful </center></h1>";  
+      }  
+      else{  
+        echo "<h1> Login failed. Invalid username or password.</h1>";  
       }
 
       $conn->close();
