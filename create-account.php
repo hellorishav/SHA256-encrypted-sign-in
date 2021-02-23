@@ -1,9 +1,5 @@
 <?php
 
-if (isset($_POST["username"])) { // Check if Username entered
-
-    if (isset($_POST["password"])) { // Check if Password entered
-
         $username = hash('sha256', $_POST["username"]); // Hashing username with SHA 256 algorithm
         $password = hash('sha256', $_POST["password"]); // Hashing password with SHA 256 algorithm
 
@@ -33,18 +29,6 @@ if (isset($_POST["username"])) { // Check if Username entered
         }
 
         $connection_to_database->close();
-
-        } else {
-
-            echo "Please enter password."; // If password not entered, return error message
-
-        }
-
-        } else {
-
-            echo "Please enter username."; // If username not entered, return error message
-
-        }
 
 ?>
 
