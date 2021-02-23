@@ -35,8 +35,8 @@ if (isset($_POST["submit"])) {
 
 <form method="post">
 
-<input type="text" id="username">Username</input><br>
-<input type="password" id="password">Password</input><br>
+<input type="text" name="username">Username</input><br>
+<input type="password" name="password">Password</input><br>
 <button type="submit" name="submit" value="submit">Create Account</button><br>
 
 </form>
