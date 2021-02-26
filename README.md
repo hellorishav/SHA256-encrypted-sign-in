@@ -14,7 +14,3 @@ First, set up a server, either virtual or local and then clone the github projec
 Once you've done that, create a MySQL Database. When you have your database credentials, proceed to the next step.
 
 There's clearly outlined variables in each of the account creation and sign in pages, just change those variable values to the credentials you obtained in the previous step and run the application. 
-
-## Running the Application
-
-If you're not able to run it on your own server, I have it hosted on mine! [Check it out](https://rishavkumar.io/SHA-256-SignIn/)
